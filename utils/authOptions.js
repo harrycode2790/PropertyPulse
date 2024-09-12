@@ -1,7 +1,9 @@
+
 import connectDB from '@/config/database';
 import User from '@/models/User';
 
 import GoogleProvider from 'next-auth/providers/google';
+import { redirect } from 'next/navigation';
 
 export const authOptions = {
   providers: [
@@ -44,8 +46,9 @@ export const authOptions = {
       const user = await User.findOne({ email: session.user.email });
       // 2. Assign the user id to the session
       session.user.id = user._id.toString();
-      // 3. return session
-      return session;
+      return session
     },
+    
   },
+ 
 };
