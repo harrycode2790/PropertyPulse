@@ -19,6 +19,7 @@ export const authOptions = {
       },
     }),
   ],
+
   callbacks: {
     // Invoked on successful signin
     async signIn({ profile }) {
@@ -50,5 +51,6 @@ export const authOptions = {
     },
     
   },
+  
  
 };

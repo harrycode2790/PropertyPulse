@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import AuthProvider from '@/components/AuthProvider'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'  
+import { GlobalProvider } from '@/context/GlobalContext'
 
 
 
@@ -16,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css'
 const Mainlayout = ({children}) => {
   return (
     <AuthProvider>
+      <GlobalProvider>
       <html lang="en">
           <body>
             <NavBar/>
@@ -24,6 +26,7 @@ const Mainlayout = ({children}) => {
             <ToastContainer/>       
           </body>       
       </html> 
+      </GlobalProvider>
      </AuthProvider>  
   )      
 }

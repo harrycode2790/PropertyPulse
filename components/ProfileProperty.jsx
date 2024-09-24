@@ -8,8 +8,10 @@ import { toast } from "react-toastify"
 const ProfileProperty = ({properties:initialProperties}) => {
 
     const [properties, setProperties] = useState(initialProperties)
-    const handleDeleteProperty = async (propertyID) => {
-      const confirmed = window.confirm('are you sure you want to delete this property?')
+    const handleDeleteProperty = async (propertyID , propertyName) => {
+      
+      
+      const confirmed = window.confirm(`are you sure you want to delete ${propertyName} property?`)
       if(!confirmed) return 
 
       await deleteProperty(propertyID)
@@ -42,7 +44,7 @@ const ProfileProperty = ({properties:initialProperties}) => {
                     <button
                       className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600"
                       type="button"
-                      onClick={() => handleDeleteProperty(property._id)}
+                      onClick={() => handleDeleteProperty(property._id , property.name)}
                     >
                       Delete
 
