@@ -27,7 +27,7 @@ const PropertyEditForm = ({property}) => {
                 <option value="Condo">Condo</option>
                 <option value="House">House</option>
                 <option value="Cabin Or Cottage">Cabin or Cottage</option>
-                <option value="Room">Room</option>
+                <option value="Room">Room</option>x 
                 <option value="Studio">Studio</option>
                 <option value="Other">Other</option>
               </select>

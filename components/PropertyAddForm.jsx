@@ -11,7 +11,7 @@ const PropertyAddForm = () => {
               <label
                 htmlFor="type"
                 className="block text-gray-700 font-bold mb-2"
-                >Property Type</label
+                >Property Type </label
               >
               <select
                 id="type"

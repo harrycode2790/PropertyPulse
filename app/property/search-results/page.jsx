@@ -18,9 +18,8 @@ const SearchResults = async ({searchParams: {location, propertyType}}) =>
 
     let query = {
 
-        $or: [
-            {name : locationPattern},
-            {description : locationPattern},
+        $or: 
+        [
             {'location.street' : locationPattern},
             {'location.city' : locationPattern},
             {'location.state' : locationPattern},
